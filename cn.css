@@ -1,0 +1,92 @@
+.ques {
+    background-color: #00132c;
+    color: white;
+    height: 800px;
+    width: 25%;
+    display: inline-block;
+    float: left;
+    /* width: 100%; */
+}
+
+
+/* .section1{
+    padding: 0 2% 12%;
+} */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6c45d8;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -ms-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-moz-scrollbar {
+    width: 5px;
+}
+
+::-moz-scrollbar-track {
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.ans {
+    width: 75%;
+    height: 800px;
+    background-image: url("bg12.jpg");
+    background-size: cover;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.ipDetails {
+    position: absolute;
+}
+
+.head1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding-top: 2%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 8%;
+}
+
+.q1 {
+    padding-left: 5%;
+    padding-top: 8%;
+    color: white;
+}
+
+.i1 {
+    font-size: 6rem;
+    margin-left: 30%;
+}
+
+.i1:hover {
+    font-size: 6.2rem;
+}
+
+a {
+    text-decoration: none;
+    line-height: 50px;
+    color: white;
+}
+
+a:hover {
+    color: gold;
+    font-size: 1.5rem;
+}
+
+.list {
+    color: white;
+    font-size: 1.1rem;
+    padding-top: 15%;
+    padding-left: 5%;
+}
