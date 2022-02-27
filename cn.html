@@ -39,21 +39,62 @@
 
         </div>
         <div class=" ans">
-            <section id="ipDetails" style="z-index: 1;">
-                <h1>Inside details:</h1>
-                <form action="">
-                    <label for="">Enter IP Adress: </label>
-                    <input type="text" name="ip" placeholder="IPv4 (192.211.214.255)">
+
+            <div id="ipDetails" class="form1">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Find all the Details of an IP:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
-            </section>
-            <div id="ip4To6">
-                <h1>ip4 to ipv6</h1>
+
             </div>
-            <div id="ipDetails"></div>
-            <div id="ipDetails"></div>
-            <div id="ipDetails"></div>
-            <div id="ipDetails"></div>
-            <div id="ipDetails"></div>
+            <div id="ipans" class="detail">
+                <table style="margin-top: 5%;" border="1px solid">
+                    <tr>
+                        <td style="border: 1px solid;">IP-Address</td>
+                        <td>val</td>
+
+                    </tr>
+                    <tr style="border: 1px solid;">
+                        <td style="border: 1px solid;">Subnet </td>
+                        <td>val</td>
+
+                    </tr>
+                    <trstyle="border: 1px solid;">
+                        <td style="border: 1px solid;">Network</td>
+                        <td>val</td>
+
+                        </tr>
+                        <tr style="border: 1px solid;">
+                            <td style="border: 1px solid;">Broadcast</td>
+                            <td>val</td>
+
+                        </tr>
+                        <tr style="border: 1px solid;">
+                            <td style="border: 1px solid;">Number of Hosts</td>
+                            <td>val</td>
+
+                        </tr>
+                        <tr style="border: 1px solid;">
+                            <td style="border: 1px solid;">Number of Usable Hosts</td>
+                            <td>val</td>
+
+                        </tr>
+                        <tr style="border: 1px solid;">
+                            <td style="border: 1px solid;">Class</td>
+                            <td>val</td>
+
+                        </tr>
+                        <tr style="border: 1px solid;">
+                            <td style="border: 1px solid;">Wild Card</td>
+                            <td>val</td>
+
+                        </tr>
+                </table>
+            </div>
 
 
 
@@ -63,7 +104,12 @@
 
     <script>
         var ipd = document.getElementById("ipDetails");
-        var ip4to6 = document.getElementById("ip4To6");
+        var ipa = document.getElementById("ipans");
+        ipa.style.display = "none";
+
+        function ipdetails() {
+            ipa.style.display = "block";
+        }
     </script>
 </body>
 
