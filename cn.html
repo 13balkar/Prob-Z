@@ -8,29 +8,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cn.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://kit.fontawesome.com/59d8afb937.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <title>Computer Networks</title>
 </head>
 
 <body>
     <section class="section1">
 
 
-        <div class=" ques">
+        <div class=" ques" >
             <div class="q1">
                 <i class="fa-solid fa-network-wired i1"></i>
                 <p class="head1">Computer Networks </p>
                 <div class="list">
                     <ul>
-                        <li> <a href=""> Find all the Details of an IP:</a><br></li>
-                        <li> <a href=""> IPv4 To IPv6</a><br></li>
-                        <li><a href=""> IPv6 To IPv4</a><br></li>
-                        <li> <a href="">Binary To Decimal</a><br></li>
-                        <li> <a href="">Binary To Hexadecimal</a><br></li>
-                        <li> <a href="">IP To Decimal</a><br></li>
-                        <li> <a href="">IPv6 Coamptiblity Checker</a><br></li>
+                        <li> <a  onclick="ipD() "> Find all the Details of an IP:</a><br></li>
+                        <li> <a  onclick="ip4To6()"> IPv4 To IPv6</a><br></li>
+                        <li><a  onclick="ip6To4()"> IPv6 To IPv4</a><br></li>
+                        <li> <a onclick="conversion()">Bin-Hex-Oct Conversions</a><br></li>
+                       
+                        <li> <a onclick="iptodec()">IP To Decimal</a><br></li>
+                        <li> <a >IPv6 Coamptiblity Checker</a><br></li>
                     </ul>
 
                 </div>
@@ -48,6 +49,66 @@
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
                     <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
+                </form>
+
+            </div>
+            <div id="ip4to6" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IPv4 To IPv6:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="button" class="bt" onclick=""> Submit</button>
+                </form>
+
+            </div>
+            <div id="ip6to4" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IPv6 To IPv4:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="button" class="bt" onclick=""> Submit</button>
+                </form>
+
+            </div>
+            <div id="convert" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Bin-Hex-Oct Conversions:</p>
+                <form action="" style="margin-left: 10%;">
+
+                    <label for="cars" style="font-size:1.3rem; margin-top:2%;">Input Operation:</label>
+                    <select name="cars"  id="cars">
+                      <option value="volvo">Bianary</option>
+                      <option value="saab">Hexadecimal</option>
+                      <option value="opel">Octal</option>
+                      
+                    </select><br>
+
+                   
+                    <label for="" style="font-size:1.3rem; margin-top:2%;">Enter the Input:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
+                    <label for="cars1" style="font-size:1.3rem; margin-top:5%;">Output Operation:</label>
+                    <select name="cars1"  id="cars1">
+                      <option value="volvo">Bianary</option>
+                      <option value="saab">Hexadecimal</option>
+                      <option value="opel">Octal</option>
+                      
+                    </select><br>
+                    <button type="button" class="bt" onclick=""> Convert</button>
+
+                </form>
+
+            </div>
+            <div id="ipdec" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IP Address To Decimal:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="button" class="bt" onclick=""> Submit</button>
                 </form>
 
             </div>
@@ -105,12 +166,65 @@
     <script>
         var ipd = document.getElementById("ipDetails");
         var ipa = document.getElementById("ipans");
-        ipa.style.display = "none";
+        var ip46=document.getElementById("ip4to6");
+        var ip64=document.getElementById("ip6to4");
+        var conv=document.getElementById("convert");
+        var dec=document.getElementById("ipdec");
 
+        ip46.style.display="none";
+        ip64.style.display="none";
+        ipa.style.display = "none";
+        conv.style.display="none";
+        dec.style.display="none";
+
+        function ipD() {
+            window.scrollTo(0,0);
+            ipd.style.display = "block";
+            ip46.style.display="none";
+            ip64.style.display="none";
+            conv.style.display="none";
+            dec.style.display="none";
+        }
         function ipdetails() {
-            ipa.style.display = "block";
+            ipa.style.display = "block";   
+        }
+
+        function ip4To6() {
+            window.scrollTo(0,0); 
+            ipd.style.display = "none";
+            ip64.style.display="none";
+            ip46.style.display = "block"; 
+            dec.style.display="none";
+            conv.style.display="none";
+        }
+        function ip6To4() {
+            window.scrollTo(0,0);
+            ipd.style.display = "none";
+            ip46.style.display = "none";  
+            ip64.style.display="block";
+            dec.style.display="none";
+            conv.style.display="none";
+        }
+        function conversion() {
+            window.scrollTo(0,0);
+            ipd.style.display = "none";
+            ip46.style.display = "none";  
+            ip64.style.display="none";
+            dec.style.display="none";
+            conv.style.display="block";
+           
+        }
+        function iptodec() {
+            window.scrollTo(0,0);
+            ipd.style.display = "none";
+            ip46.style.display = "none";  
+            ip64.style.display="none";
+            conv.style.display="none";
+            dec.style.display="block";
+           
         }
     </script>
+
 </body>
 
 </html>
