@@ -8,7 +8,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #6c45d8;
+    background:#4786c9;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     -ms-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
