@@ -49,6 +49,15 @@
     transition: ease-in;
 }
 
+.bt:hover {
+    color: #02224f;
+    background-color: #f7f9f9;
+    border-width: 10px;
+    border-color: #f7f9f9;
+    border-radius: 30px;
+    box-shadow: 0 2px 1px 0 rgba(4, 84, 75, 0.158), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 /* .section1{
     padding: 0 2% 12%;
