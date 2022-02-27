@@ -24,8 +24,8 @@
                 <p class="head1">Computer Networks </p>
                 <div class="list">
                     <ul>
-                        <li> <a href=""> Find all the Details of an IP:</a><br></li>
-                        <li> <a href=""> IPv4 To IPv6</a><br></li>
+                        <li> <a href="#ipDetails" onclick="ipD()"> Find all the Details of an IP:</a><br></li>
+                        <li> <a href="#ip4to6" onclick="ip4To6()"> IPv4 To IPv6</a><br></li>
                         <li><a href=""> IPv6 To IPv4</a><br></li>
                         <li> <a href="">Binary To Decimal</a><br></li>
                         <li> <a href="">Binary To Hexadecimal</a><br></li>
@@ -48,6 +48,28 @@
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
                     <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
+                </form>
+
+            </div>
+            <div id="ip4to6" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IPv4 To IPv6:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="button" class="bt" onclick=""> Submit</button>
+                </form>
+
+            </div>
+            <div id="ip4to6" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IPv6 To IPv4:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="button" class="bt" onclick=""> Submit</button>
                 </form>
 
             </div>
@@ -105,10 +127,22 @@
     <script>
         var ipd = document.getElementById("ipDetails");
         var ipa = document.getElementById("ipans");
+        var ip46=document.getElementById("ip4to6");
+        ip46.style.display="none";
         ipa.style.display = "none";
 
+
+        function ipD() {
+            ipd.style.display = "block";
+            ip46.style.display="none";
+        }
         function ipdetails() {
-            ipa.style.display = "block";
+            ipa.style.display = "block";   
+        }
+
+        function ip4To6() {
+            ipd.style.display = "none";
+            ip46.style.display = "block";  
         }
     </script>
 </body>
