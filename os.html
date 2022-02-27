@@ -21,20 +21,20 @@
 
         <div class=" ques" >
             <div class="q1">
-                <i class="fa-solid fa-network-wired i1"></i>
-                <p class="head1">Computer Networks </p>
+                <i class="fa-solid fa-microchip i1"></i>
+                <p class="head1">Operating Systems </p>
                 <div class="list">
                     <ul>
-                        <li> <a  onclick="ipD() "> Find all the Details of an IP:</a><br></li>
-                        <li> <a  onclick="ip4To6()"> IPv4 To IPv6</a><br></li>
-                        <li><a  onclick="ip6To4()"> IPv6 To IPv4</a><br></li>
-                        <li> <a onclick="conversion()">Bin-Hex-Oct Conversions</a><br></li>
+                        <li> <a  onclick="ipD() "> FCFS CPU Scheduling</a><br></li>
+                        <li> <a  onclick="ip4To6()"> SJF CPU Scheduling</a><br></li>
+                        <li><a  onclick="ip6To4()"> Round Robin Scheduling</a><br></li>
+                        <li> <a onclick="conversion()">Deadlock Detection</a><br></li>
                        
-                        <li> <a onclick="iptodec()">IP To Decimal</a><br></li>
-                        <li> <a onclick="compat()">IPv6 Coamptiblity Checker</a><br></li>
+                        <li> <a onclick="iptodec()">Page Replacement</a><br></li>
+                        <!-- <li> <a onclick="compat()">IPv6 Coamptiblity Checker</a><br></li>
                         <li> <a onclick="ip6expand()">IPv6 Expand</a><br></li>
                         <li> <a onclick="ip6compress()">IPv6 Compress</a><br></li>
-                        <li> <a onclick="hostfun()">IP Hosting Details</a><br></li>
+                        <li> <a onclick="hostfun()">IP Hosting Details</a><br></li> -->
                     </ul>
 
                 </div>
@@ -47,74 +47,97 @@
            
 
             <div id="ipDetails" class="form1">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Find all the Details of an IP:</p>
-                <form action="" style="margin-left: 10%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">First-Come First-Serve</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold; line-height: 5px;">CPU Scheduling:</p>
+   
+                <form action="" style="margin-left: 10%; margin-top: 8%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter Name of Processes:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Burst Time:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
                     <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
 
             </div>
-            <div id="ip4to6" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IPv4 To IPv6:</p>
-                <form action="" style="margin-left: 10%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+            <div id="ip4to6" class="form3">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Shortest Job First</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold; line-height: 5px;">CPU Scheduling:</p>
+   
+                <form action="" style="margin-left: 10%; margin-top: 8%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter Name of Processes:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Arrival Time:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick=""> Submit</button>
+                    <label for="cars1" style="font-size:1.3rem; margin-left: 5%; margin-top:0;">Pre-Emption:</label>
+                    <select name="cars1"  id="cars1">
+                      <option value="volvo">Yes</option>
+                      <option value="saab">No</option>
+                    
+                      
+                    </select><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Burst Time:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                   
+                    <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
-
             </div>
             <div id="ip6to4" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IPv6 To IPv4:</p>
-                <form action="" style="margin-left: 10%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Round-Robin</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold; line-height: 5px;">CPU Scheduling:</p>
+   
+                <form action="" style="margin-left: 10%; margin-top: 8%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter Name of Processes:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Quantum Time:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick=""> Submit</button>
+                    <label for="cars1" style="font-size:1.3rem; margin-left: 5%; margin-top:0;">Pre-Emption:</label>
+                    <select name="cars1"  id="cars1">
+                      <option value="volvo">Yes</option>
+                      <option value="saab">No</option>
+                    
+                      
+                    </select><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Burst Time:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                   
+                    <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
 
             </div>
-            <div id="convert" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Bin-Hex-Oct Conversions:</p>
-                <form action="" style="margin-left: 10%;">
+            <div id="convert" class="form3" style="height: 50%;">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Deadlock Detection:</p>
+               
+                <form action="" style="margin-left: 10%; margin-top: 2%;">
+                    <label for="ip" style="font-size:1.3rem;"> No. of Processes:</label> 
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%; margin-left:7%;">Enter Resources Allocated:</label><br>
 
-                    <label for="cars" style="font-size:1.3rem; margin-top:2%;">Input Operation:</label>
-                    <select name="cars"  id="cars">
-                      <option value="volvo">Binary</option>
-                      <option value="saab">Hexadecimal</option>
-                      <option value="opel">Octal</option>
-                      
-                    </select><br>
-
+                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 20%;">
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%; margin-left:15%;"><br>
                    
-                    <label for="" style="font-size:1.3rem; margin-top:2%;">Enter the Input:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
-                    <label for="cars1" style="font-size:1.3rem; margin-top:5%;">Output Operation:</label>
-                    <select name="cars1"  id="cars1">
-                      <option value="volvo">Binary</option>
-                      <option value="saab">Hexadecimal</option>
-                      <option value="opel">Octal</option>
-                      
-                    </select><br>
-                    <button type="button" class="bt" onclick=""> Convert</button>
-
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Resources Requested:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;"><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Resources Available:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                   
+                    <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
-
             </div>
             <div id="ipdec" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IP Address To Decimal:</p>
-                <form action="" style="margin-left: 10%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Find Number of Page Faults:</p>
+
+                <form action="" style="margin-left: 10%; margin-top: 8%;">
+                    <label for="ip" style="font-size:1.3rem;"> Enter Number of Pages:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Capacity of Page:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;"><br>
+                   
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Pages Order:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick=""> Submit</button>
+                   
+                    <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
+               
+               
 
             </div>
             <div id="ipcompat" class="form2">

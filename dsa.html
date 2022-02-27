@@ -21,20 +21,21 @@
 
         <div class=" ques" >
             <div class="q1">
-                <i class="fa-solid fa-network-wired i1"></i>
-                <p class="head1">Computer Networks </p>
+                <!-- <i class="fa-solid fa-network-wired i1"></i> -->
+                <i class="fa-solid fa-laptop-code i1"></i>
+                <p class="head2">Data Structures & Algo </p>
                 <div class="list">
                     <ul>
-                        <li> <a  onclick="ipD() "> Find all the Details of an IP:</a><br></li>
-                        <li> <a  onclick="ip4To6()"> IPv4 To IPv6</a><br></li>
-                        <li><a  onclick="ip6To4()"> IPv6 To IPv4</a><br></li>
-                        <li> <a onclick="conversion()">Bin-Hex-Oct Conversions</a><br></li>
+                        <li> <a  onclick="ipD() "> Postorder Traversal</a><br></li>
+                        <li> <a  onclick="ip4To6()"> Preorder Traversal</a><br></li>
+                        <li><a  onclick="ip6To4()"> Inorder Traversal</a><br></li>
+                        <li> <a onclick="conversion()">Postfix To Prefix</a><br></li>
                        
-                        <li> <a onclick="iptodec()">IP To Decimal</a><br></li>
-                        <li> <a onclick="compat()">IPv6 Coamptiblity Checker</a><br></li>
-                        <li> <a onclick="ip6expand()">IPv6 Expand</a><br></li>
-                        <li> <a onclick="ip6compress()">IPv6 Compress</a><br></li>
-                        <li> <a onclick="hostfun()">IP Hosting Details</a><br></li>
+                        <li> <a onclick="iptodec()">Prefix To Postfix</a><br></li>
+                        <li> <a onclick="compat()">Infix To Postfix</a><br></li>
+                        <li> <a onclick="ip6expand()">Job Scheduling Algo</a><br></li>
+                        <li> <a onclick="ip6compress()">Knapsack Problem (0/1)</a><br></li>
+                        <li> <a onclick="hostfun()">Activity Selection</a><br></li>
                     </ul>
 
                 </div>
@@ -47,112 +48,121 @@
            
 
             <div id="ipDetails" class="form1">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Find all the Details of an IP:</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Postorder Traversal:</p>
                 <form action="" style="margin-left: 10%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                    <label for="ip" style="font-size:1.3rem;"> Enter Inorder Traversal:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Preorder Traversal:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
                     <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
 
             </div>
             <div id="ip4to6" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IPv4 To IPv6:</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Preorder Traversal:</p>
                 <form action="" style="margin-left: 10%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                    <label for="ip" style="font-size:1.3rem;"> Enter Postorder Traversal:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Inorder Traversal:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
                     <button type="button" class="bt" onclick=""> Submit</button>
                 </form>
 
             </div>
             <div id="ip6to4" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IPv6 To IPv4:</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Inorder Traversal:</p>
                 <form action="" style="margin-left: 10%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
+                    <label for="ip" style="font-size:1.3rem;"> Enter Postorder Traversal:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
+                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Preorder Traversal:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
                     <button type="button" class="bt" onclick=""> Submit</button>
                 </form>
 
             </div>
             <div id="convert" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Bin-Hex-Oct Conversions:</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Postfix To Prefix</p>
                 <form action="" style="margin-left: 10%;">
 
-                    <label for="cars" style="font-size:1.3rem; margin-top:2%;">Input Operation:</label>
-                    <select name="cars"  id="cars">
-                      <option value="volvo">Binary</option>
-                      <option value="saab">Hexadecimal</option>
-                      <option value="opel">Octal</option>
-                      
-                    </select><br>
+                  
 
                    
-                    <label for="" style="font-size:1.3rem; margin-top:2%;">Enter the Input:</label><br>
+                    <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Postfix Expression:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
-                    <label for="cars1" style="font-size:1.3rem; margin-top:5%;">Output Operation:</label>
-                    <select name="cars1"  id="cars1">
-                      <option value="volvo">Binary</option>
-                      <option value="saab">Hexadecimal</option>
-                      <option value="opel">Octal</option>
-                      
-                    </select><br>
+                   
                     <button type="button" class="bt" onclick=""> Convert</button>
 
                 </form>
 
             </div>
             <div id="ipdec" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IP Address To Decimal:</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Prefix To Postfix:</p>
                 <form action="" style="margin-left: 10%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
-                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick=""> Submit</button>
+
+                    <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Prefix Expression:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
+                   
+                    <button type="button" class="bt" onclick=""> Convert</button>
+
                 </form>
 
             </div>
             <div id="ipcompat" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">IP Coamptiblity Checker:</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Infix To Prefix:</p>
                 <form action="" style="margin-left: 10%;">
-                    <label for="domain" style="font-size:1.3rem;"> Enter Domain Name:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="Domain Name" style="width: 50%;"><br>
+
+                  
+
+                   
+                    <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Infix Expression:</label><br>
+                    <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
+                   
+                    <button type="button" class="bt" onclick=""> Convert</button>
+
+                </form>
+
+            </div>
+            <div id="ip6exp" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;"> Job Scheduling Algo:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="domain" style="font-size:1.3rem;"> Enter Name of Jobs:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <label for="domain" style="font-size:1.3rem;"> Enter Profit:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <label for="domain" style="font-size:1.3rem;"> Enter Deadline:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                  
                     
                     <button type="button" class="bt" onclick=""> Submit</button>
                 </form>
 
             </div>
-          
             <div id="ip6com" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">IPv6 Compression Tool:</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Knapsack Problem (0/1):</p>
                 <form action="" style="margin-left: 10%;">
-                    <label for="domain" style="font-size:1.3rem;"> Enter IPv6 Address:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <label for="domain" style="font-size:1.3rem;"> Enter Weight of Knapsack:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="Knapsack-Weight" style="width: 50%;"><br>
+                    <label for="domain" style="font-size:1.3rem;"> Enter Weights:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="Weights" style="width: 50%;"><br>
+                    <label for="domain" style="font-size:1.3rem;"> Enter Values:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="Values" style="width: 50%;"><br>
+                  
                     
-                    <button type="button" class="bt" onclick=""> Compress</button>
+                    <button type="button" class="bt" onclick=""> Submit</button>
                 </form>
 
             </div>
-            <div id="ip6exp" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">IPv6 Expansion Tool:</p>
-                <form action="" style="margin-left: 10%;">
-                    <label for="domain" style="font-size:1.3rem;"> Enter IPv6 Address:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
-                    
-                    <button type="button" class="bt" onclick=""> Expand</button>
-                </form>
-
-            </div>
+           
             <div id="hosting" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">IP Hosting Details:</p>
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Activity Selection Problem:</p>
                 <form action="" style="margin-left: 10%;">
-                    <label for="domain" style="font-size:1.3rem;"> Enter IP Address:</label><br>
-                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <label for="domain" style="font-size:1.3rem;"> Enter Activities:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="Knapsack-Weight" style="width: 50%;"><br>
+                    <label for="domain" style="font-size:1.3rem;"> Enter Starting Time:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="Weights" style="width: 50%;"><br>
+                    <label for="domain" style="font-size:1.3rem;"> Enter Finishing Time:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="Values" style="width: 50%;"><br>
+                  
                     
                     <button type="button" class="bt" onclick=""> Submit</button>
                 </form>
