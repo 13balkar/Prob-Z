@@ -31,7 +31,9 @@
                         <li> <a onclick="conversion()">Bin-Hex-Oct Conversions</a><br></li>
                        
                         <li> <a onclick="iptodec()">IP To Decimal</a><br></li>
-                        <li> <a >IPv6 Coamptiblity Checker</a><br></li>
+                        <li> <a onclick="compat()">IPv6 Coamptiblity Checker</a><br></li>
+                        <li> <a onclick="ip6expand()">IPv6 Expand</a><br></li>
+                        <li> <a onclick="ip6compress()">IPv6 Compress</a><br></li>
                     </ul>
 
                 </div>
@@ -40,7 +42,7 @@
 
         </div>
         <div class=" ans">
-
+<a style="margin-left:90%; font-size:1.2rem;" href="index.html">Home</a>
             <div id="ipDetails" class="form1">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Find all the Details of an IP:</p>
                 <form action="" style="margin-left: 10%;">
@@ -80,7 +82,7 @@
 
                     <label for="cars" style="font-size:1.3rem; margin-top:2%;">Input Operation:</label>
                     <select name="cars"  id="cars">
-                      <option value="volvo">Bianary</option>
+                      <option value="volvo">Binary</option>
                       <option value="saab">Hexadecimal</option>
                       <option value="opel">Octal</option>
                       
@@ -91,7 +93,7 @@
                     <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
                     <label for="cars1" style="font-size:1.3rem; margin-top:5%;">Output Operation:</label>
                     <select name="cars1"  id="cars1">
-                      <option value="volvo">Bianary</option>
+                      <option value="volvo">Binary</option>
                       <option value="saab">Hexadecimal</option>
                       <option value="opel">Octal</option>
                       
@@ -109,6 +111,37 @@
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
                     <button type="button" class="bt" onclick=""> Submit</button>
+                </form>
+
+            </div>
+            <div id="ipcompat" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">IP Coamptiblity Checker:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="domain" style="font-size:1.3rem;"> Enter Domain Name:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="Domain Name" style="width: 50%;"><br>
+                    
+                    <button type="button" class="bt" onclick=""> Submit</button>
+                </form>
+
+            </div>
+          
+            <div id="ip6com" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">IPv6 Compression Tool:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="domain" style="font-size:1.3rem;"> Enter Domain Name:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="Domain Name" style="width: 50%;"><br>
+                    
+                    <button type="button" class="bt" onclick=""> Compress</button>
+                </form>
+
+            </div>
+            <div id="ip6exp" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">IPv6 Expansion Tool:</p>
+                <form action="" style="margin-left: 10%;">
+                    <label for="domain" style="font-size:1.3rem;"> Enter Domain Name:</label><br>
+                    <input type="text" name="domin" id="domain" placeholder="Domain Name" style="width: 50%;"><br>
+                    
+                    <button type="button" class="bt" onclick=""> Expand</button>
                 </form>
 
             </div>
@@ -170,12 +203,18 @@
         var ip64=document.getElementById("ip6to4");
         var conv=document.getElementById("convert");
         var dec=document.getElementById("ipdec");
+        var comp=document.getElementById("ipcompat");
+        var ip6comprs=document.getElementById("ip6com");
+        var ip6expnd=document.getElementById("ip6exp");
 
         ip46.style.display="none";
         ip64.style.display="none";
         ipa.style.display = "none";
         conv.style.display="none";
         dec.style.display="none";
+        comp.style.display="none";
+        ip6comprs.style.display="none";
+        ip6expnd.style.display="none";
 
         function ipD() {
             window.scrollTo(0,0);
@@ -184,6 +223,9 @@
             ip64.style.display="none";
             conv.style.display="none";
             dec.style.display="none";
+            comp.style.display="none";
+            ip6comprs.style.display="none";
+        ip6expnd.style.display="none";
         }
         function ipdetails() {
             ipa.style.display = "block";   
@@ -196,6 +238,9 @@
             ip46.style.display = "block"; 
             dec.style.display="none";
             conv.style.display="none";
+            comp.style.display="none";
+            ip6comprs.style.display="none";
+        ip6expnd.style.display="none";
         }
         function ip6To4() {
             window.scrollTo(0,0);
@@ -204,6 +249,9 @@
             ip64.style.display="block";
             dec.style.display="none";
             conv.style.display="none";
+            comp.style.display="none";
+            ip6comprs.style.display="none";
+        ip6expnd.style.display="none";
         }
         function conversion() {
             window.scrollTo(0,0);
@@ -212,6 +260,9 @@
             ip64.style.display="none";
             dec.style.display="none";
             conv.style.display="block";
+            comp.style.display="none";
+            ip6comprs.style.display="none";
+        ip6expnd.style.display="none";
            
         }
         function iptodec() {
@@ -221,6 +272,45 @@
             ip64.style.display="none";
             conv.style.display="none";
             dec.style.display="block";
+            comp.style.display="none";
+            ip6comprs.style.display="none";
+        ip6expnd.style.display="none";
+           
+        }
+        function compat() {
+            window.scrollTo(0,0);
+            ipd.style.display = "none";
+            ip46.style.display = "none";  
+            ip64.style.display="none";
+            conv.style.display="none";
+            dec.style.display="none";
+            comp.style.display="block";
+            ip6comprs.style.display="none";
+            ip6expnd.style.display="none";
+           
+        }
+        function ip6compress() {
+            window.scrollTo(0,0);
+            ipd.style.display = "none";
+            ip46.style.display = "none";  
+            ip64.style.display="none";
+            conv.style.display="none";
+            dec.style.display="none";
+            comp.style.display="none";
+            ip6comprs.style.display="block";
+        ip6expnd.style.display="none";
+           
+        }
+        function ip6expand() {
+            window.scrollTo(0,0);
+            ipd.style.display = "none";
+            ip46.style.display = "none";  
+            ip64.style.display="none";
+            conv.style.display="none";
+            dec.style.display="none";
+            comp.style.display="none";
+            ip6comprs.style.display="none";
+        ip6expnd.style.display="block";
            
         }
     </script>
