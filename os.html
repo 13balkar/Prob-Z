@@ -141,26 +141,29 @@
 
             </div>
             <div id="ip6to4" class="form3">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Round-Robin</p>
-                <p style="font-size: 2rem; text-align:center; font-weight:bold; line-height: 5px;">CPU Scheduling:</p>
+                <h1 class="display-3" style="font-size: 3rem; font-weight: 350;" >Round-Robin Scheduling</h1>
+                <br>
+                <div id="showinput"></div>
+                <hr>
+                <div class="row">
+                    <div class="form-group" style="margin-left:50px; float:left;  width: 30%">
+                        <label class="col-form-label" for="inputDefault">Enter arrival time:</label>
+                        <input class="form-control" id="newat" name="at" placeholder="Arrival Time" type="text" size="35">
+                    </div>
+                    <div class="form-group" style="margin-left:50px; float:left;  width: 30%">
+                        <label class="col-form-label" for="inputDefault">Enter burst time:</label>
+                        <input class="form-control" id="newbt" name="bt" placeholder="Burst Time" type="text" size="35">
+                    </div>
+                </div>
 
-                <form action="" style="margin-left: 10%; margin-top: 8%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter Name of Processes:</label><br>
-                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Quantum Time:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <label for="cars1" style="font-size:1.3rem; margin-left: 5%; margin-top:0;">Pre-Emption:</label>
-                    <select name="cars1" id="cars1">
-                      <option value="volvo">Yes</option>
-                      <option value="saab">No</option>
-                    
-                      
-                    </select><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Burst Time:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                <button type="submit" class="btn btn-primary" style="margin-left: 8%; margin-top:5%;" onclick="addToList()">Add</button>
+                <br>
+                <button type="submit" class="btn btn-primary" style="margin-left: 50%;" onclick="showOutput(2)">Schedule It!</button>
+                <button type="submit" class="btn btn-primary" style="margin-left: 2%; position:absolute; " onclick="clearData()">Clear Data</button>
 
-                    <button type="button" class="bt" onclick="rr()"> Submit</button>
-                </form>
+
+
+
 
             </div>
             <div id="convert" class="form3" style="height: 50%;">
