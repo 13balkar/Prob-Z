@@ -45,6 +45,7 @@
         </div>
         <div class=" ans">
             <a href="index.html"> <i class="fa-solid fa-house-chimney" style="margin-left:90%; margin-top: 2%; color: white; font-size:2rem;"></i></a>
+            <a href="index.html"> <p style="margin-left:89.5%; margin-top: -2%; color: white; font-size:1.2rem;">Home</p></a>
 
 
             <div id="ipDetails" class="form1">
@@ -65,7 +66,7 @@
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Inorder Traversal:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick=""> Submit</button>
+                    <button type="button" class="bt" onclick="ip426()"> Submit</button>
                 </form>
 
             </div>
@@ -76,7 +77,7 @@
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Preorder Traversal:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick=""> Submit</button>
+                    <button type="button" class="bt" onclick="ip624()"> Submit</button>
                 </form>
 
             </div>
@@ -91,17 +92,13 @@
                     <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Postfix Expression:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
 
-                    <button type="button" class="bt" onclick=""> Convert</button>
+                    <button type="button" class="bt" onclick="binto()"> Convert</button>
 
                 </form>
 
             </div>
 
-            <div id="dsas" class="ans1 detail" style="width: 55%; margin-left:4%;">
-                <p style="color: #00132c; font-size:2rem; font-weight:500;"> Resulta:</p>
-                <p id="reslt" style="color: #00132c; font-size:1.2rem;"></p>
-                <p id="reslt1" style="color: #00132c; font-size:1.5rem; text-align:center; font-weight:600;"></p>
-            </div>
+            
 
             <div id="ipdec" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Prefix To Postfix:</p>
@@ -110,7 +107,7 @@
                     <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Prefix Expression:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
 
-                    <button type="button" class="bt" onclick=""> Convert</button>
+                    <button type="button" class="bt" onclick="ip2dec()"> Convert</button>
 
                 </form>
 
@@ -125,12 +122,12 @@
                     <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Infix Expression:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
 
-                    <button type="button" class="bt" onclick=""> Convert</button>
+                    <button type="button" class="bt" onclick="ipcc()"> Convert</button>
 
                 </form>
 
             </div>
-            <div id="ip6exp" class="form2">
+            <div id="ip6exp" class="form2" style="margin-top: 0%;">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;"> Job Scheduling Algo:</p>
                 <form action="" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Name of Jobs:</label><br>
@@ -141,11 +138,11 @@
                     <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
 
 
-                    <button type="button" class="bt" onclick=""> Submit</button>
+                    <button type="button" class="bt" onclick="expand()"> Submit</button>
                 </form>
 
             </div>
-            <div id="ip6com" class="form2">
+            <div id="ip6com" class="form2" style="margin-top: 0%;" >
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Knapsack Problem (0/1):</p>
                 <form action="" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Weight of Knapsack:</label><br>
@@ -156,13 +153,13 @@
                     <input type="text" name="domin" id="domain" placeholder="Values" style="width: 50%;"><br>
 
 
-                    <button type="button" class="bt" onclick=""> Submit</button>
+                    <button type="button" class="bt" onclick="compress()"> Submit</button>
                 </form>
 
             </div>
 
-            <div id="hosting" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Activity Selection Problem:</p>
+            <div id="hosting" class="form2" style="margin-top: 0%;">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold; ">Activity Selection Problem:</p>
                 <form action="" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Activities:</label><br>
                     <input type="text" name="domin" id="domain" placeholder="Knapsack-Weight" style="width: 50%;"><br>
@@ -172,9 +169,14 @@
                     <input type="text" name="domin" id="domain" placeholder="Values" style="width: 50%;"><br>
 
 
-                    <button type="button" class="bt" onclick=""> Submit</button>
+                    <button type="button" class="bt" onclick="hostt()"> Submit</button>
                 </form>
 
+            </div>
+            <div id="dsas" class="ans1 detail" style="width: 50%; margin-left:7%;">
+                <p style="color: #00132c; font-size:2rem; font-weight:500;"> Results:</p>
+                <p id="reslt" style="color: #00132c; font-size:1.2rem;"></p>
+                <p id="reslt1" style="color: #00132c; font-size:1.5rem; text-align:center; font-weight:600;"></p>
             </div>
             <div id="ipans" class="detail">
                 <table style="margin-top: 5%;" border="1px solid">
@@ -188,7 +190,7 @@
                         <td>val</td>
 
                     </tr>
-                    <trstyle="border: 1px solid;">
+                    <tr style="border: 1px solid;">
                         <td style="border: 1px solid;">Network</td>
                         <td>val</td>
 
@@ -238,8 +240,9 @@
         var ip6comprs = document.getElementById("ip6com");
         var ip6expnd = document.getElementById("ip6exp");
         var hostd = document.getElementById("hosting");
-        var dsar = document.getElementById("dsas");
-
+        var res = document.getElementById("dsas");
+        
+        ipa.style.display="none";
         ip46.style.display = "none";
         ip64.style.display = "none";
         ipa.style.display = "none";
@@ -249,10 +252,11 @@
         ip6comprs.style.display = "none";
         ip6expnd.style.display = "none";
         hostd.style.display = "none";
-        dsar.style.display = "none";
+        res.style.display = "none";
 
         function ipD() {
             window.scrollTo(0, 0);
+            ipa.style.display="none";
             ipd.style.display = "block";
             ip46.style.display = "none";
             ip64.style.display = "none";
@@ -263,13 +267,68 @@
             ip6expnd.style.display = "none";
             hostd.style.display = "none";
         }
+        function ip426() {
+            res.style.display = "block";
+            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
+            document.getElementById("reslt1").innerHTML = "<%= res %>";
+        }
 
+        function ip624() {
+            res.style.display = "block";
+            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
+            document.getElementById("reslt1").innerHTML = "<%= res %>";
+        }
+
+        function binto() {
+            res.style.display = "block";
+            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
+            document.getElementById("reslt1").innerHTML = "<%= res %>";
+        }
+
+        function ip2dec() {
+            res.style.display = "block";
+            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
+            document.getElementById("reslt1").innerHTML = "<%= res %>";
+        }
+
+        function ipcc() {
+            res.style.display = "block";
+            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
+            document.getElementById("reslt1").innerHTML = "<%= res %>";
+        }
+
+        function expand() {
+            res.style.display = "block";
+            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
+            document.getElementById("reslt1").innerHTML = "<%= res %>";
+        }
+
+        function compress() {
+            res.style.display = "block";
+            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
+            document.getElementById("reslt1").innerHTML = "<%= res %>";
+        }
+
+        function hostt() {
+            
+            res.style.display="block";
+            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
+            document.getElementById("reslt1").innerHTML = "<%= res %>";
+         
+        }
         function ipdetails() {
-            ipa.style.display = "block";
+          
+            res.style.display="block";
+            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
+            document.getElementById("reslt1").innerHTML = "<%= res %>";
+         
         }
 
         function ip4To6() {
             window.scrollTo(0, 0);
+            res.style.display="none";
+            ipa.style.display = "none";
+            res.style.display="none";
             ipd.style.display = "none";
             ip64.style.display = "none";
             ip46.style.display = "block";
@@ -283,6 +342,8 @@
 
         function ip6To4() {
             window.scrollTo(0, 0);
+            res.style.display="none";
+            ipa.style.display = "none";
             ipd.style.display = "none";
             ip46.style.display = "none";
             ip64.style.display = "block";
@@ -296,6 +357,8 @@
 
         function conversion() {
             window.scrollTo(0, 0);
+            res.style.display="none";
+            ipa.style.display = "none";
             ipd.style.display = "none";
             ip46.style.display = "none";
             ip64.style.display = "none";
@@ -310,6 +373,8 @@
 
         function iptodec() {
             window.scrollTo(0, 0);
+            res.style.display="none";
+            ipa.style.display="none";
             ipd.style.display = "none";
             ip46.style.display = "none";
             ip64.style.display = "none";
@@ -324,6 +389,8 @@
 
         function compat() {
             window.scrollTo(0, 0);
+            res.style.display="none";
+            ipa.style.display="none"
             ipd.style.display = "none";
             ip46.style.display = "none";
             ip64.style.display = "none";
@@ -337,6 +404,8 @@
 
         function ip6compress() {
             window.scrollTo(0, 0);
+            res.style.display="none";
+            ipa.style.display = "none";
             ipd.style.display = "none";
             ip46.style.display = "none";
             ip64.style.display = "none";
@@ -350,6 +419,8 @@
 
         function ip6expand() {
             window.scrollTo(0, 0);
+            res.style.display="none";
+            ipa.style.display = "none";
             ipd.style.display = "none";
             ip46.style.display = "none";
             ip64.style.display = "none";
@@ -363,6 +434,8 @@
 
         function hostfun() {
             window.scrollTo(0, 0);
+            res.style.display="none";
+            ipa.style.display = "none";
             ipd.style.display = "none";
             ip46.style.display = "none";
             ip64.style.display = "none";
