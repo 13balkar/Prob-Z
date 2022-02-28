@@ -46,8 +46,8 @@
             <a href="index.html"> <i class="fa-solid fa-house-chimney" style="margin-left:90%; margin-top: 2%; color: white; font-size:2rem;"></i></a>
 
 
-            <div id="ipDetails" class="form3" style="height: 45%;">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">First-Come First-Serve</p>
+            <div id="ipDetails" class="form3">
+                <!-- <p style="font-size: 2rem; text-align:center; font-weight:bold;">First-Come First-Serve</p>
                 <p style="font-size: 2rem; text-align:center; font-weight:bold; line-height: 5px;">CPU Scheduling:</p>
 
                 <form action="" style="margin-left: 10%; margin-top: 8%;">
@@ -56,30 +56,89 @@
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Burst Time:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
                     <button type="button" class="bt" onclick="fcfs()"> Submit</button>
-                </form>
+                </form> -->
+
+
+
+
+
+                <h1 class="display-3">FCFS Scheduling</h1>
+                <br>
+                <div id="showinput"></div>
+                <hr>
+                <div class="row">
+                    <div class="form-group" style="margin-left:50px; float:left;  width: 30%">
+                        <label class="col-form-label" for="inputDefault">Enter arrival time:</label>
+                        <input class="form-control" id="newat" name="at" placeholder="Arrival Time" type="text" size="35">
+                    </div>
+                    <div class="form-group" style="margin-left:50px; float:left;  width: 30%">
+                        <label class="col-form-label" for="inputDefault">Enter burst time:</label>
+                        <input class="form-control" id="newbt" name="bt" placeholder="Burst Time" type="text" size="35">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-left: 8%; margin-top:5%;" onclick="addToList()">Add</button>
+                <br>
+                <button type="submit" class="btn btn-primary" style="margin-left: 50%;" onclick="showOutput(0)">Schedule It!</button>
+                <button type="submit" class="btn btn-primary" style="margin-left: 2%; position:absolute; " onclick="clearData()">Clear Data</button>
+
+
+
+
+
 
             </div>
+            <div id="cpus" class="ans1 detail" style="width: 55%; margin-left:4% ;border: 1px solid;">
+                <h3 id="operations-heading" style="text-align:center;"></h3>
+                <div id="operations"></div>
+
+
+                <h2 id="chart-header" style="text-align:center;"></h2>
+                <br />
+                <div id="gantt"></div>
+                <div id="ourdiv"></div>
+                <div id="timer"></div>
+                <br /><br />
+                <div>
+                    <div style="width: 50%; text-align:center;float:left; font-size: 20px;" id="awt1"></div>
+                    <div style="width:50%; text-align:center;float:left;font-size:20px;" id="atat1"></div>
+                </div>
+
+
+
+
+                <h2 id="table-heading" style="text-align:center;"></h2>
+                <div>
+                    <table id="tab" class="table table-striped centered responsive-table" style="border-color: black; border-width: 2 px; align: center; cellspacing: 10px;">
+                        <thead id="thead"></thead>
+                        <tbody id="ptable"></tbody>
+                    </table>
+                </div>
+            </div>
+
+
             <div id="ip4to6" class="form3">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Shortest Job First</p>
-                <p style="font-size: 2rem; text-align:center; font-weight:bold; line-height: 5px;">CPU Scheduling:</p>
 
-                <form action="" style="margin-left: 10%; margin-top: 8%;">
-                    <label for="ip" style="font-size:1.3rem;"> Enter Name of Processes:</label><br>
-                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Arrival Time:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <label for="cars1" style="font-size:1.3rem; margin-left: 5%; margin-top:0;">Pre-Emption:</label>
-                    <select name="cars1" id="cars1">
-                      <option value="volvo">Yes</option>
-                      <option value="saab">No</option>
-                    
-                      
-                    </select><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Burst Time:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                <h1 class="display-3">SJF Scheduling</h1>
+                <br>
+                <div id="showinput"></div>
+                <hr>
+                <div class="row">
+                    <div class="form-group" style="margin-left:50px; float:left;  width: 30%">
+                        <label class="col-form-label" for="inputDefault">Enter arrival time:</label>
+                        <input class="form-control" id="newat" name="at" placeholder="Arrival Time" type="text" size="35">
+                    </div>
+                    <div class="form-group" style="margin-left:50px; float:left;  width: 30%">
+                        <label class="col-form-label" for="inputDefault">Enter burst time:</label>
+                        <input class="form-control" id="newbt" name="bt" placeholder="Burst Time" type="text" size="35">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-left: 8%; margin-top:5%;" onclick="addToList()">Add</button>
+                <br>
+                <button type="submit" class="btn btn-primary" style="margin-left: 50%;" onclick="showOutput(0)">Schedule It!</button>
+                <button type="submit" class="btn btn-primary" style="margin-left: 2%; position:absolute; " onclick="clearData()">Clear Data</button>
 
-                    <button type="button" class="bt" onclick="sjf()"> Submit</button>
-                </form>
+
             </div>
             <div id="ip6to4" class="form3">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Round-Robin</p>
@@ -140,7 +199,7 @@
 
 
             </div>
-            <div id="cpus" class="ans1 detail" style="width: 55%; margin-left:4%;">
+            <!-- <div id="cpus" class="ans1 detail" style="width: 55%; margin-left:4%;">
                 <p style="color: #00132c; font-size:2rem; font-weight:500;"> Resulta:</p>
                 <p id="reslt" style="color: #00132c; font-size:1.2rem;"></p>
                 <p id="reslt1" style="color: #00132c; font-size:1.5rem; text-align:center; font-weight:600;"></p>
@@ -154,7 +213,7 @@
                 <p style="color: #00132c; font-size:2rem; font-weight:500;"> Resultp:</p>
                 <p id="reslt" style="color: #00132c; font-size:1.2rem;"></p>
                 <p id="reslt1" style="color: #00132c; font-size:1.5rem; text-align:center; font-weight:600;"></p>
-            </div>
+            </div> -->
 
 
             <div id="ipcompat" class="form2">
@@ -246,6 +305,8 @@
 
 
         </div>
+
+
 
     </section>
 
@@ -464,6 +525,7 @@
             pages.style.display = "none";
         }
     </script>
+    <script src="os.js"></script>
 
 </body>
 
