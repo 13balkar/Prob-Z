@@ -11,7 +11,7 @@ window.onscroll = function() {
         document.getElementById("myP").className = "old";
     }
 };
-console.log("hi");
+
 var textWrapper = document.querySelector('.ml9 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 anime.timeline({
