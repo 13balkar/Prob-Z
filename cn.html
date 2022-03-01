@@ -35,6 +35,7 @@
                         <li> <a onclick="ip6expand()">IPv6 Expand</a><br></li>
                         <li> <a onclick="ip6compress()">IPv6 Compress</a><br></li>
                         <li> <a onclick="hostfun()">IP Hosting Details</a><br></li>
+                        <li> <a onclick="myip()">Your Ip address</a><br></li>
                     </ul>
 
                 </div>
@@ -44,16 +45,16 @@
         </div>
         <div class=" ans">
             <a href="index.html"> <i class="fa-solid fa-house-chimney" style="margin-left:90%; margin-top: 2%; color: white; font-size:2rem;"></i></a>
-            <a href="index.html"> <p style="margin-left:89.5%; margin-top: -2%; color: white; font-size:1.2rem;">Home</p></a>
 
-            <div id="ipDetails" class="form1" style="margin-top: 0%;">
+
+            <div id="ipDetails" class="form1">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Find all the Details of an IP:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/ipdetail" method="post" style="margin-left: 10%;">
                     <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
                     <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
+                    <button type="submit" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
 
             </div>
@@ -70,7 +71,7 @@
             </div>
             <div id="ip6to4" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IPv6 To IPv4:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="ipdetail" style="margin-left: 10%;">
                     <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
@@ -79,9 +80,9 @@
                 </form>
 
             </div>
-            <div id="convert" class="form2" style="margin-top: 0%;">
+            <div id="convert" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Bin-Hex-Oct Conversions:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/convert" method="post" style="margin-left: 10%;">
 
                     <label for="cars" style="font-size:1.3rem; margin-top:1%;">Input From:</label>
                     <label for="cars1" style="font-size:1.3rem; margin-top:1%; margin-left:21%;">Output To:</label><br>
@@ -103,19 +104,17 @@
                     <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 68%;"><br>
 
 
-                    <button type="button" class="bt" onclick="binto()"> Convert</button>
+                    <button type="submit" class="bt" > Convert</button>
 
                 </form>
 
             </div>
             <div id="ipdec" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Convert IP Address To Decimal:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/i2i" method="post" style="margin-left: 10%;">
                     <label for="ip" style="font-size:1.3rem;"> Enter IP Address:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
-                    <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Subnet Mask:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick="ip2dec()"> Submit</button>
+                    <button type="submit" class="bt" onclick="ip2dec()"> Submit</button>
                 </form>
 
             </div>
@@ -123,7 +122,7 @@
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">IP Compatibility Checker:</p>
                 <form action="" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Domain Name:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="Domain Name" style="width: 50%;"><br>
+                    <input type="text" name="domain" id="domain" placeholder="Domain Name" style="width: 50%;"><br>
 
                     <button type="button" class="bt" onclick="ipcc()"> Submit</button>
                 </form>
@@ -132,31 +131,38 @@
 
             <div id="ip6com" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">IPv6 Compression Tool:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/compress" method="post" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter IPv6 Address:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <input type="text" name="domain" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
 
-                    <button type="button" class="bt" onclick="compress()"> Compress</button>
+                    <button type="submit" class="bt" onclick="compress()"> Compress</button>
                 </form>
 
             </div>
             <div id="ip6exp" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">IPv6 Expansion Tool:</p>
-                <form action="" style="margin-left: 10%;">
-                    <label for="domain" style="font-size:1.3rem;"> Enter IPv6 Address:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                <form action="/expand" method="post" style="margin-left: 10%;">
+                    <label for="do" style="font-size:1.3rem;"> Enter IPv6 Address:</label><br>
+                    <input type="text" name="do" value="2001:db8:85a3::8a2e:370:7334" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
 
-                    <button type="button" class="bt" onclick="expand()"> Expand</button>
+                    <button type="submit" class="bt" onclick="expand()"> Expand</button>
                 </form>
 
             </div>
             <div id="hosting" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">IP Hosting Details:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/hostdetail" method="post" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter IP Address:</label><br>
                     <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
 
-                    <button type="button" class="bt" onclick="hostt()"> Submit</button>
+                    <button type="submit" class="bt" onclick="hostt()"> Submit</button>
+                </form>
+
+            </div>
+            <div id="myipp" class="form2">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Click to know your ip details</p>
+                <form action="/myip" method="post" style="margin-left: 10%;">
+                    <button type="submit" class="bt" onclick="myippp()"> Submit</button>
                 </form>
 
             </div>
@@ -278,6 +284,7 @@
         var hostd = document.getElementById("hosting");
         var res = document.getElementById("result");
         var hosttd = document.getElementById("hostd");
+        var myipp=document.getElementById("myipp");
 
         ip46.style.display = "none";
         ip64.style.display = "none";
@@ -290,6 +297,7 @@
         hostd.style.display = "none";
         res.style.display = "none";
         hosttd.style.display = "none";
+        myipp.style.display = "none";
 
         function ipD() {
             window.scrollTo(0, 0);
@@ -305,6 +313,7 @@
             hostd.style.display = "none";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
         }
 
         function ip426() {
@@ -352,14 +361,17 @@
         function hostt() {
             hosttd.style.display = "block";
         }
+        function myippp() {
+            myipp.style.display = "block";
+        }
 
         function ipdetails() {
             ipa.style.display = "block";
-            ipd.style.marginTop = "-1%";
+            ipd.style.marginTop = "0";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
         }
-
         function ip4To6() {
             window.scrollTo(0, 0);
             ipd.style.display = "none";
@@ -374,6 +386,7 @@
             hostd.style.display = "none";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
         }
 
         function ip6To4() {
@@ -390,6 +403,7 @@
             hostd.style.display = "none";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
         }
 
         function conversion() {
@@ -406,6 +420,7 @@
             hostd.style.display = "none";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
         }
 
         function iptodec() {
@@ -422,6 +437,7 @@
             hostd.style.display = "none";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
         }
 
         function compat() {
@@ -438,6 +454,7 @@
             hostd.style.display = "none";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
         }
 
         function ip6compress() {
@@ -454,6 +471,7 @@
             hostd.style.display = "none";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
         }
 
         function ip6expand() {
@@ -470,6 +488,7 @@
             hostd.style.display = "none";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
         }
 
         function hostfun() {
@@ -486,12 +505,26 @@
             hostd.style.display = "block";
             res.style.display = "none";
             hosttd.style.display = "none";
+            myipp.style.display = "none";
+        }
+        function myip() {
+            window.scrollTo(0, 0);
+            ipd.style.display = "none";
+            ip46.style.display = "none";
+            ip64.style.display = "none";
+            ipa.style.display = "none";
+            conv.style.display = "none";
+            dec.style.display = "none";
+            comp.style.display = "none";
+            ip6comprs.style.display = "none";
+            ip6expnd.style.display = "none";
+            hostd.style.display = "none";
+            res.style.display = "none";
+            hosttd.style.display = "none";
+            myipp.style.display = "block";
         }
     </script>
 
 </body>
 
-
-
 </html>
-

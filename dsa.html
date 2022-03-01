@@ -29,10 +29,10 @@
                         <li> <a onclick="ipD() "> Postorder Traversal</a><br></li>
                         <li> <a onclick="ip4To6()"> Preorder Traversal</a><br></li>
                         <li><a onclick="ip6To4()"> Inorder Traversal</a><br></li>
-                        <li> <a onclick="conversion()">Postfix To Prefix</a><br></li>
+                        <li> <a onclick="conversion()">Infix To Postfix</a><br></li>
 
                         <li> <a onclick="iptodec()">Prefix To Postfix</a><br></li>
-                        <li> <a onclick="compat()">Infix To Postfix</a><br></li>
+                        <li> <a onclick="compat()">Infix To Prefix</a><br></li>
                         <li> <a onclick="ip6expand()">Job Scheduling Algo</a><br></li>
                         <li> <a onclick="ip6compress()">Knapsack Problem (0/1)</a><br></li>
                         <li> <a onclick="hostfun()">Activity Selection</a><br></li>
@@ -50,49 +50,49 @@
 
             <div id="ipDetails" class="form1">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Postorder Traversal:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/postorder" method="post" style="margin-left: 10%;">
                     <label for="ip" style="font-size:1.3rem;"> Enter Inorder Traversal:</label><br>
-                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <input type="text" name="in" id="ip" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Preorder Traversal:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
+                    <input type="text" name="pre" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="submit" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
 
             </div>
             <div id="ip4to6" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Preorder Traversal:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/preorder" method="post" style="margin-left: 10%;">
                     <label for="ip" style="font-size:1.3rem;"> Enter Postorder Traversal:</label><br>
-                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <input type="text" name="post" id="ip" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Inorder Traversal:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick="ip426()"> Submit</button>
+                    <input type="text" name="in" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="submit" class="bt" onclick="ip426()"> Submit</button>
                 </form>
 
             </div>
             <div id="ip6to4" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Inorder Traversal:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/inorder" method="post" style="margin-left: 10%;">
                     <label for="ip" style="font-size:1.3rem;"> Enter Postorder Traversal:</label><br>
-                    <input type="text" name="ip" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <input type="text" name="post" id="ip" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Preorder Traversal:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="button" class="bt" onclick="ip624()"> Submit</button>
+                    <input type="text" name="pre" id="mask" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="submit" class="bt" onclick="ip624()"> Submit</button>
                 </form>
 
             </div>
 
             <div id="convert" class="form2">
-                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Postfix To Prefix</p>
-                <form action="" style="margin-left: 10%;">
+                <p style="font-size: 2rem; text-align:center; font-weight:bold;">Infix to Postfix</p>
+                <form action="/intopost" method="post" style="margin-left: 10%;">
 
 
 
 
-                    <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Postfix Expression:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
+                    <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Infix Expression:</label><br>
+                    <input type="text" name="inp" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
 
-                    <button type="button" class="bt" onclick="binto()"> Convert</button>
+                    <button type="submit" class="bt" onclick="binto()"> Convert</button>
 
                 </form>
 
@@ -102,74 +102,74 @@
 
             <div id="ipdec" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Prefix To Postfix:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/pretopost" method="post" style="margin-left: 10%;">
 
                     <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Prefix Expression:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
+                    <input type="text" name="inp" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
 
-                    <button type="button" class="bt" onclick="ip2dec()"> Convert</button>
+                    <button type="submit" class="bt" onclick="ip2dec()"> Convert</button>
 
                 </form>
 
             </div>
             <div id="ipcompat" class="form2">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Infix To Prefix:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/intopre" method="post" style="margin-left: 10%;">
 
 
 
 
                     <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Infix Expression:</label><br>
-                    <input type="text" name="mask" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
+                    <input type="text" name="inp" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
 
-                    <button type="button" class="bt" onclick="ipcc()"> Convert</button>
+                    <button type="submit" class="bt" onclick="ipcc()"> Convert</button>
 
                 </form>
 
             </div>
             <div id="ip6exp" class="form2" style="margin-top: 0%;">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;"> Job Scheduling Algo:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/job" method="post" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Name of Jobs:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <input type="text" name="ids" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Profit:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <input type="text" name="profit" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Deadline:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <input type="text" name="dead" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
 
 
-                    <button type="button" class="bt" onclick="expand()"> Submit</button>
+                    <button type="submit" class="bt" onclick="expand()"> Submit</button>
                 </form>
 
             </div>
             <div id="ip6com" class="form2" style="margin-top: 0%;" >
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Knapsack Problem (0/1):</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/knap" method="post" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Weight of Knapsack:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="Knapsack-Weight" style="width: 50%;"><br>
+                    <input type="text" name="knap" id="domain" placeholder="Knapsack-Weight" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Weights:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="Weights" style="width: 50%;"><br>
+                    <input type="text" name="weight" id="domain" placeholder="Weights" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Values:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="Values" style="width: 50%;"><br>
+                    <input type="text" name="value" id="domain" placeholder="Values" style="width: 50%;"><br>
 
 
-                    <button type="button" class="bt" onclick="compress()"> Submit</button>
+                    <button type="submit" class="bt" onclick="compress()"> Submit</button>
                 </form>
 
             </div>
 
             <div id="hosting" class="form2" style="margin-top: 0%;">
                 <p style="font-size: 2rem; text-align:center; font-weight:bold; ">Activity Selection Problem:</p>
-                <form action="" style="margin-left: 10%;">
+                <form action="/activity" method="post" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Activities:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="Knapsack-Weight" style="width: 50%;"><br>
+                    <input type="text" name="name" id="domain" placeholder="Knapsack-Weight" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Starting Time:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="Weights" style="width: 50%;"><br>
+                    <input type="text" name="start" id="domain" placeholder="Weights" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Finishing Time:</label><br>
-                    <input type="text" name="domin" id="domain" placeholder="Values" style="width: 50%;"><br>
+                    <input type="text" name="end" id="domain" placeholder="Values" style="width: 50%;"><br>
 
 
-                    <button type="button" class="bt" onclick="hostt()"> Submit</button>
+                    <button type="submit" class="bt" onclick="hostt()"> Submit</button>
                 </form>
 
             </div>
