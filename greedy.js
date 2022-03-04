@@ -50,7 +50,7 @@ var
 nm="a,b,c,d,e",
 pr="100,19,27,25,15",
 dd="2,1,2,1,3";
-// console.log(JobScheduling(nm, pr, dd));
+console.log(JobScheduling(nm, pr, dd));
 
 
 let Activity=[];
@@ -123,6 +123,6 @@ const knapSack = (values, weights, target) => {
     return out;
   }
   // console.log(knapSackprob(val,wt,tr));
-
-  export default knapSackprob;
-  export {knapSackprob,activities,JobScheduling};
+  
+  // export default knapSackprob;
+  // export {knapSackprob,activities,JobScheduling};

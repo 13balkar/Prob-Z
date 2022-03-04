@@ -55,6 +55,7 @@ let post="8,9,4,5,2,6,7,3,1";
 let ino="8,4,9,2,5,1,6,3,7";
 function inorder(pr,po)
 {
+
   let pre=pr.split(",").map(Number);
   let post=po.split(",").map(Number);
   let n=pre.length;
@@ -65,11 +66,12 @@ function inorder(pr,po)
     out=[];
     var root = constructTree(pre, post,n);
     printInorder(root);
-    return out;
+    console.log(out.toString());
+    return out.toString();
   }
 }
 
-// console.log(inorder(pre,post));
+// inorder(pre,post).toString();
 // console.log(preorder(ino,post));
 // console.log(postorder(ino,pre));
 
@@ -155,6 +157,7 @@ function prins(arr,pre,st,en)
 
 function postorder(ino,pre)
 {
+  // console.log(ino);
   out=[];
   let inor=ino.split(",").map(Number);
   let preo=pre.split(",").map(Number);
@@ -169,5 +172,5 @@ function postorder(ino,pre)
   }
 }
 
-export default inorder;
-export {inorder,preorder,postorder};
+// export default inorder;
+// export {inorder,preorder,postorder};

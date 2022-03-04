@@ -135,5 +135,5 @@ let exp = "a+b*(c^d-e)^(f+g*h)-i";
 // console.log(preToPost(pre_exp));
 
 
-export default infixToPrefix;
-export {infixToPrefix,infixToPostfix,preToPost};
+// export default infixToPrefix;
+// export {infixToPrefix,infixToPostfix,preToPost};

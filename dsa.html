@@ -7,12 +7,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cn.css">
+    <link rel="stylesheet" href="./public/cn.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://kit.fontawesome.com/59d8afb937.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
-    <title>Computer Networks</title>
+    <title>Data Structures & Algo</title>
 </head>
 
 <body>
@@ -52,10 +52,10 @@
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Postorder Traversal:</p>
                 <form action="/postorder" method="post" style="margin-left: 10%;">
                     <label for="ip" style="font-size:1.3rem;"> Enter Inorder Traversal:</label><br>
-                    <input type="text" name="in" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <input type="text" name="in" id="post_in" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Preorder Traversal:</label><br>
-                    <input type="text" name="pre" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="submit" class="bt" onclick="ipdetails()"> Submit</button>
+                    <input type="text" name="pre" id="post_pre" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="button" class="bt" onclick="ipdetails()"> Submit</button>
                 </form>
 
             </div>
@@ -63,10 +63,10 @@
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Preorder Traversal:</p>
                 <form action="/preorder" method="post" style="margin-left: 10%;">
                     <label for="ip" style="font-size:1.3rem;"> Enter Postorder Traversal:</label><br>
-                    <input type="text" name="post" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <input type="text" name="post" id="pre_post" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Inorder Traversal:</label><br>
-                    <input type="text" name="in" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="submit" class="bt" onclick="ip426()"> Submit</button>
+                    <input type="text" name="in" id="pre_in" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="button" class="bt" onclick="ip426()"> Submit</button>
                 </form>
 
             </div>
@@ -74,10 +74,10 @@
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Inorder Traversal:</p>
                 <form action="/inorder" method="post" style="margin-left: 10%;">
                     <label for="ip" style="font-size:1.3rem;"> Enter Postorder Traversal:</label><br>
-                    <input type="text" name="post" id="ip" placeholder="IP Address" style="width: 50%;"><br>
+                    <input type="text" name="post" id="in_post" placeholder="IP Address" style="width: 50%;"><br>
                     <label for="mask" style="font-size:1.3rem; margin-top:2%;">Enter Preorder Traversal:</label><br>
-                    <input type="text" name="pre" id="mask" placeholder="Subnet Mask" style="width: 50%;">
-                    <button type="submit" class="bt" onclick="ip624()"> Submit</button>
+                    <input type="text" name="pre" id="in_pre" placeholder="Subnet Mask" style="width: 50%;">
+                    <button type="button" class="bt" onclick="ip624()"> Submit</button>
                 </form>
 
             </div>
@@ -90,9 +90,9 @@
 
 
                     <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Infix Expression:</label><br>
-                    <input type="text" name="inp" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
+                    <input type="text" name="inp" id="infix" placeholder="Enter Input" style="width: 59%;"><br>
 
-                    <button type="submit" class="bt" onclick="binto()"> Convert</button>
+                    <button type="button" class="bt" onclick="binto()"> Convert</button>
 
                 </form>
 
@@ -105,9 +105,9 @@
                 <form action="/pretopost" method="post" style="margin-left: 10%;">
 
                     <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Prefix Expression:</label><br>
-                    <input type="text" name="inp" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
+                    <input type="text" name="inp" id="prefic" placeholder="Enter Input" style="width: 59%;"><br>
 
-                    <button type="submit" class="bt" onclick="ip2dec()"> Convert</button>
+                    <button type="button" class="bt" onclick="ip2dec()"> Convert</button>
 
                 </form>
 
@@ -120,9 +120,9 @@
 
 
                     <label for="" style="font-size:1.3rem; margin-top:2%;">Enter Infix Expression:</label><br>
-                    <input type="text" name="inp" id="mask" placeholder="Enter Input" style="width: 59%;"><br>
+                    <input type="text" name="inp" id="inpre" placeholder="Enter Input" style="width: 59%;"><br>
 
-                    <button type="submit" class="bt" onclick="ipcc()"> Convert</button>
+                    <button type="button" class="bt" onclick="ipcc()"> Convert</button>
 
                 </form>
 
@@ -131,14 +131,14 @@
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;"> Job Scheduling Algo:</p>
                 <form action="/job" method="post" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Name of Jobs:</label><br>
-                    <input type="text" name="ids" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <input type="text" name="ids" id="job_1" placeholder="IPv6 Address" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Profit:</label><br>
-                    <input type="text" name="profit" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <input type="text" name="profit" id="job_2" placeholder="IPv6 Address" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Deadline:</label><br>
-                    <input type="text" name="dead" id="domain" placeholder="IPv6 Address" style="width: 50%;"><br>
+                    <input type="text" name="dead" id="job_3" placeholder="IPv6 Address" style="width: 50%;"><br>
 
 
-                    <button type="submit" class="bt" onclick="expand()"> Submit</button>
+                    <button type="button" class="bt" onclick="expands()"> Submit</button>
                 </form>
 
             </div>
@@ -146,14 +146,14 @@
                 <p style="font-size: 2rem; text-align:center; font-weight:bold;">Knapsack Problem (0/1):</p>
                 <form action="/knap" method="post" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Weight of Knapsack:</label><br>
-                    <input type="text" name="knap" id="domain" placeholder="Knapsack-Weight" style="width: 50%;"><br>
+                    <input type="text" name="knap" id="knap_3" placeholder="Knapsack-Weight" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Weights:</label><br>
-                    <input type="text" name="weight" id="domain" placeholder="Weights" style="width: 50%;"><br>
+                    <input type="text" name="weight" id="knap_2" placeholder="Weights" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Values:</label><br>
-                    <input type="text" name="value" id="domain" placeholder="Values" style="width: 50%;"><br>
+                    <input type="text" name="value" id="knap_1" placeholder="Values" style="width: 50%;"><br>
 
 
-                    <button type="submit" class="bt" onclick="compress()"> Submit</button>
+                    <button type="button" class="bt" onclick="compress()"> Submit</button>
                 </form>
 
             </div>
@@ -162,14 +162,14 @@
                 <p style="font-size: 2rem; text-align:center; font-weight:bold; ">Activity Selection Problem:</p>
                 <form action="/activity" method="post" style="margin-left: 10%;">
                     <label for="domain" style="font-size:1.3rem;"> Enter Activities:</label><br>
-                    <input type="text" name="name" id="domain" placeholder="Knapsack-Weight" style="width: 50%;"><br>
+                    <input type="text" name="name" id="act_1" placeholder="Knapsack-Weight" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Starting Time:</label><br>
-                    <input type="text" name="start" id="domain" placeholder="Weights" style="width: 50%;"><br>
+                    <input type="text" name="start" id="act_2" placeholder="Weights" style="width: 50%;"><br>
                     <label for="domain" style="font-size:1.3rem;"> Enter Finishing Time:</label><br>
-                    <input type="text" name="end" id="domain" placeholder="Values" style="width: 50%;"><br>
+                    <input type="text" name="end" id="act_3" placeholder="Values" style="width: 50%;"><br>
 
 
-                    <button type="submit" class="bt" onclick="hostt()"> Submit</button>
+                    <button type="button" class="bt" onclick="hostt()"> Submit</button>
                 </form>
 
             </div>
@@ -268,59 +268,95 @@
             hostd.style.display = "none";
         }
         function ip426() {
+            var inp= document.getElementById("pre_in").value ,
+            post=document.getElementById("pre_post").value;
+            var out=preorder(inp,post);
             res.style.display = "block";
-            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
-            document.getElementById("reslt1").innerHTML = "<%= res %>";
+            console.log(out);
+            document.getElementById("reslt").innerHTML = "The preorder traversal is :";
+            document.getElementById("reslt1").innerHTML = out;
         }
 
         function ip624() {
+            var pre= document.getElementById("in_pre").value ,
+            post=document.getElementById("in_post").value;
+            var out=inorder(pre,post).toString();
+            console.log(out);
             res.style.display = "block";
-            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
-            document.getElementById("reslt1").innerHTML = "<%= res %>";
+            document.getElementById("reslt").innerHTML = "The inorder traversal is :";
+            document.getElementById("reslt1").innerHTML = out;
         }
 
         function binto() {
             res.style.display = "block";
-            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
-            document.getElementById("reslt1").innerHTML = "<%= res %>";
+            var inp=document.getElementById("infix").value;
+            var out=infixToPostfix(inp);
+            document.getElementById("reslt").innerHTML = "The Infix to Postfix of "+inp+" is : ";
+            document.getElementById("reslt1").innerHTML = out;
         }
 
         function ip2dec() {
             res.style.display = "block";
-            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
-            document.getElementById("reslt1").innerHTML = "<%= res %>";
+            
+            var inp=document.getElementById("prefic").value;
+            var out=preToPost(inp);
+            document.getElementById("reslt").innerHTML = "The Prefix To Postfix of "+inp+" is : ";
+            document.getElementById("reslt1").innerHTML = out;
         }
 
         function ipcc() {
             res.style.display = "block";
-            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
-            document.getElementById("reslt1").innerHTML = "<%= res %>";
+            var inp=document.getElementById("inpre").value;
+            var out=infixToPrefix(inp);
+            document.getElementById("reslt").innerHTML = "The Infix To Prefix of "+inp+" is : ";
+            document.getElementById("reslt1").innerHTML = out;
         }
 
-        function expand() {
+        function expands() {
+            var name=document.getElementById("job_1").value,
+            profit=document.getElementById("job_2").value,
+            dead=document.getElementById("job_3").value;
+            console.log();
+            var out=JobScheduling(name,profit,dead);
             res.style.display = "block";
-            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
-            document.getElementById("reslt1").innerHTML = "<%= res %>";
+            document.getElementById("reslt").innerHTML = "The selected jobs are";
+            document.getElementById("reslt1").innerHTML = out;
         }
 
         function compress() {
             res.style.display = "block";
-            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
-            document.getElementById("reslt1").innerHTML = "<%= res %>";
+            var val=document.getElementById("knap_1").value,
+            wt=document.getElementById("knap_2").value,
+            target=document.getElementById("knap_3").value;
+            console.log();
+            var out=knapSackprob(val,wt,target);
+            document.getElementById("reslt").innerHTML = "Maximum profit that can be obtained is:";
+            document.getElementById("reslt1").innerHTML = out;
         }
 
         function hostt() {
             
             res.style.display="block";
-            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
-            document.getElementById("reslt1").innerHTML = "<%= res %>";
+            var acti=document.getElementById("act_1").value,
+            ss=document.getElementById("act_2").value,
+            ff=document.getElementById("act_3").value;
+            console.log();
+            var out=activities(ss,ff);
+            var o=[];
+            out.forEach(pair =>
+            o.push("("+pair[0]+","+pair[1]+")"));
+            document.getElementById("reslt").innerHTML = "Maximum activities that can be take place are: ";
+            document.getElementById("reslt1").innerHTML = o;
          
         }
         function ipdetails() {
-          
+
+            var inp= document.getElementById("post_in").value ,
+            pre=document.getElementById("post_pre").value;
+            var out=postorder(inp,pre);
             res.style.display="block";
-            document.getElementById("reslt").innerHTML = "The IPv6 Output of Corresponding IP <%= IPv4 %> is : ";
-            document.getElementById("reslt1").innerHTML = "<%= res %>";
+            document.getElementById("reslt").innerHTML = "The postorder traversal is :";
+            document.getElementById("reslt1").innerHTML = out;
          
         }
 
@@ -447,7 +483,9 @@
             hostd.style.display = "block";
         }
     </script>
-
+    <script src="./tree.js"></script>
+    <script src="./stack.js"></script>
+    <script src="./greedy.js"></script>
 </body>
 
 </html>
