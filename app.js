@@ -26,6 +26,11 @@ app.get("/cn", function(req, res) {
   // res.render('cn', {IPv4:"",res:""});
 });
 
+app.get("/", function(req, res) {
+  res.sendFile(__dirname+"/index.html");
+  // res.render('cn', {IPv4:"",res:""});
+});
+
 app.post("/ipdetail",function(req,res){
   var out=ipdetails(req.body.ip,req.body.mask).toString();
   var inp={ips:req.body.ip,masks:req.body.mask};
