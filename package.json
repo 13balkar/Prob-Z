@@ -26,5 +26,16 @@
     "osps": "^1.0.1",
     "prefix-infix-postfix": "^0.0.1",
     "public-ip": "^5.0.0"
-  }
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sukhbir521/Prob-Z.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sukhbir521/Prob-Z/issues"
+  },
+  "homepage": "https://github.com/sukhbir521/Prob-Z#readme"
 }
