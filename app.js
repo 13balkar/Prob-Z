@@ -1,8 +1,8 @@
 import path from 'path';
-import {ipdetails,compress,expand,getip,hostdetails,iptodec} from './cn.js';
-import {inorder,preorder,postorder} from "./tree.js"
-import {infixToPrefix,infixToPostfix,preToPost} from "./stack.js";
-import {knapSackprob,activities,JobScheduling} from "./greedy.js"
+// import {ipdetails,compress,expand,getip,hostdetails,iptodec} from './cn.js';
+// import {inorder,preorder,postorder} from "./tree.js"
+// import {infixToPrefix,infixToPostfix,preToPost} from "./stack.js";
+// import {knapSackprob,activities,JobScheduling} from "./greedy.js"
 import enc from './enc.js';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -19,6 +19,22 @@ app.use(bp.urlencoded({
 app.set('view engine', 'ejs');
 app.listen(process.env.PORT || 3000, function() {
   console.log("server started on port 3000");
+});
+app.get("/os",function(req,res){
+  //res.send("hfsij");
+  res.sendFile(__dirname + "/fcfs.html");
+});
+app.get("/sjf",function(req,res){
+  //res.send("hfsij");
+  res.sendFile(__dirname + "/sjf.html");
+});
+app.get("/rr",function(req,res){
+  //res.send("hfsij");
+  res.sendFile(__dirname + "/rr.html");
+});
+app.get("/disk",function(req,res){
+  //res.send("hfsij");
+  res.sendFile(__dirname + "/disk.html");
 });
 
 app.get("/cn", function(req, res) {

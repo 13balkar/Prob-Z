@@ -1,6 +1,5 @@
 
 
-
 var p = [];
 var p1=[];
 var index = 1;
@@ -14,7 +13,7 @@ var flg = -1;
 var quantum;
 
 function addToList() {
-    
+   
     var at = document.getElementById("newat").value;
     var bt = document.getElementById("newbt").value;
     
